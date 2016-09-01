@@ -1,8 +1,8 @@
 //
-//  KeyboardListener.h
-//  keyboardlistenertest
+//  KeyboardListener.m
+//  keyboard-listener plugin
 //
-//  Created by Greg Shutt on 12/9/13.
+//  Created by Greg Shutt on 9/1/16.
 //
 //
 
@@ -10,9 +10,8 @@
 
 @interface KeyboardListener : CDVPlugin
 
-    @property (nonatomic, retain) NSString* callbackId;
-    
-    -(void)cordovaRegister:(CDVInvokedUrlCommand*)command;
+-(void)cordovaRegister:(CDVInvokedUrlCommand*)command;
++(void)onKeyPress:(NSString*)key;
++(NSArray*)keyCommands;
 
-    
 @end
