@@ -10,6 +10,8 @@
 
 	<platform name="ios">
 		<header-file src="src/ios/KeyboardListener.h" />
+		<header-file src="src/ios/MainViewController+KeyboardListener.h" />
 		<source-file src="src/ios/KeyboardListener.m" />
+		<source-file src="src/ios/MainViewController+KeyboardListener.m" />
 	</platform>
 </plugin>
