@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="keyboard-listener" version="0.0.2">
+	<engines>
+		<engine name="cordova" version="3.2.0"/>
+	</engines>
+	<name>KeyboardListener</name>
+	<description></description>
+
+	<js-module src="www/keyboardlistener.js" name="KeyboardListener" />
+
+	<platform name="ios">
+		<header-file src="src/ios/KeyboardListener.h" />
+		<source-file src="src/ios/KeyboardListener.m" />
+	</platform>
+</plugin>
