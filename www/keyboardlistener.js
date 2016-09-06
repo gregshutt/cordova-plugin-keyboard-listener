@@ -1,25 +1,22 @@
 var exec = require('cordova/exec');
 
-// initializer
-function KeyboardListener() {
+var KeyboardListener = { 
+  register: function() {
+    exec(
+      function(key) {
+        if(key !== "") {
+          var e = new CustomEvent('keyboard-listener-keypress', { detail: { 'keycode': key }} );
+          document.dispatchEvent(e);
+        }      
+      },
 
-}
+      function() {
+        // TODO
+      },
 
-KeyboardListener.prototype.register = function() {
-  exec(
-    function(key) {
-      if(key !== "") {
-        var e = new CustomEvent('bt-keyboard', { detail: { 'keycode': key }} );
-        document.dispatchEvent(e);
-      }      
-    },
+      'KeyboardListener', 'cordovaRegister', []
+    );
+  }
+};
 
-    function() {
-      console.log('boo');
-    },
-
-    'KeyboardListener', 'cordovaRegister', []
-  );
-}
-
-module.exports = new KeyboardListener();
+module.exports = KeyboardListener;
