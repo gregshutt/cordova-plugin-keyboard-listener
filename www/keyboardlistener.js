@@ -12,7 +12,7 @@ var KeyboardListener = {
           // also simulate a keypress, since the ios plugin eats up the keys
           // yanked from http://stackoverflow.com/questions/596481/simulate-javascript-key-events
           e = document.createEvent("KeyboardEvent");
-          var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
+          var initMethod = typeof e.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
           e[initMethod](
                    "keydown", // event type : keydown, keyup, keypress
                     true, // bubbles
