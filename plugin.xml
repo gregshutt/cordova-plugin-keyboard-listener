@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-keyboard-listener" version="0.0.2">
+  <name>KeyboardListener</name>
+  <description></description>
+  <author>Greg Shutt</author>
+
   <engines>
     <engine name="cordova" version="&gt;6.0.0"/>
   </engines>
-  <name>KeyboardListener</name>
-  <description></description>
 
   <js-module src="www/keyboardlistener.js" name="KeyboardListener">
     <clobbers target="window.KeyboardListener" />
   </js-module>
 
   <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="KeyboardListener">
+        <param name="ios-package" value="KeyboardListener" />
+      </feature>
+    </config-file>
+
     <header-file src="src/ios/KeyboardListener.h" />
     <header-file src="src/ios/MainViewController+KeyboardListener.h" />
     <source-file src="src/ios/KeyboardListener.m" />
