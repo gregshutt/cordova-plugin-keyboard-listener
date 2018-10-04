@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-keyboard-listener",
+  "version": "0.0.2",
+  "description": "Cordova/Phonegap plugin to allow listening to all keyboard events in an app",
+  "cordova": {
+    "id": "cordova-plugin-keyboard-listener",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregshutt/cordova-plugin-keyboard-listener.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">6.0.0"
+    }
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregshutt/cordova-plugin-keyboard-listener/issues"
+  },
+  "homepage": "https://github.com/gregshutt/cordova-plugin-keyboard-listener#readme"
+}
